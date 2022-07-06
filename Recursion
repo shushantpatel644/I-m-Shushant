@@ -1,1 +1,30 @@
+//Factorial of a Number
 
+//Factorial of n is:
+//n! = n * (n-1) * (n-2) * (n-3)....* 1
+
+
+#include <iostream>
+using namespace std;
+
+int fact(int n){
+    if(n==0) return 1; 
+    
+    
+    int factAns = fact(n-1);
+    return n*factAns;
+}
+int main() {
+    //Write your code here
+    int n;
+    cin>>n;
+    if(n<0)
+    { 
+        cout<<"Error";    
+    }
+    else
+    {
+        cout<<fact(n);
+    }
+    return 0;
+}
